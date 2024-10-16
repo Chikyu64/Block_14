@@ -37,7 +37,7 @@ console.log(`The odd numbers you gave are ${getOdds(numbers)}.`);
  * @returns {number} the length of the array
  */
 function getLength(numbers) {
-  // TODO
+  return numbers.length;
 }
 
 /**
@@ -45,7 +45,11 @@ function getLength(numbers) {
  * @returns {number} the sum of the numbers
  */
 function getSum(numbers) {
-  // TODO
+  let sum = 0;
+  for (let i = 0; i < numbers.length; i++) {
+    sum += numbers[i];
+  }
+  return sum;
 }
 
 /**
@@ -53,7 +57,8 @@ function getSum(numbers) {
  * @returns {number} the mean of the numbers
  */
 function getMean(numbers) {
-  // TODO
+  let numbMean = getSum(numbers) / numbers.length;
+  return numbMean;
 }
 
 /**
@@ -61,7 +66,13 @@ function getMean(numbers) {
  * @returns {number} the smallest of the numbers
  */
 function getMin(numbers) {
-  // TODO
+  for (let i = 0; i < numbers.length; i++) {
+    let min = numbers[0];
+    if (numbers[i] < min) {
+      min = numbers[i];
+    }
+    return min;
+  }
 }
 
 /**
@@ -69,15 +80,21 @@ function getMin(numbers) {
  * @returns {number} the largest of the numbers
  */
 function getMax(numbers) {
-  // TODO
+  for (let i = 0; i < numbers.length; i++) {
+    let max = numbers[4];
+    if (numbers[i] < max) {
+      max = numbers[i];
+    }
+    return max;
+  }
 }
-
 /**
  * @param {number[]} numbers an array of integers
  * @returns {number} the range of the numbers (max - min)
  */
 function getRange(numbers) {
-  // TODO
+  let numRange = numbers[4] - numbers[0];
+  return numRange;
 }
 
 /**
@@ -85,13 +102,26 @@ function getRange(numbers) {
  * @returns {number[]} the even numbers in the array
  */
 function getEvens(numbers) {
-  // TODO
+  let evenArr = [];
+  for (let i = 0; i < numbers.length; i++) {
+    const number = numbers[i];
+    if (number % 2 === 0) {
+      evenArr.push(number);
+    }
+  }
+  return evenArr;
 }
-
 /**
  * @param {number[]} numbers an array of integers
  * @returns {number[]} the odd numbers in the array
  */
 function getOdds(numbers) {
-  // TODO
+  let oddArr = [];
+  for (let i = 0; i < numbers.length; i++) {
+    const number = numbers[i];
+    if (number % 2 != 0) {
+      oddArr.push(number);
+    }
+  }
+  return oddArr;
 }
