@@ -82,7 +82,7 @@ function getMin(numbers) {
 function getMax(numbers) {
   for (let i = 0; i < numbers.length; i++) {
     let max = numbers[4];
-    if (numbers[i] < max) {
+    if (numbers[i] > max) {
       max = numbers[i];
     }
     return max;
